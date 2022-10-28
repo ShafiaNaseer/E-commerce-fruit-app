@@ -30,11 +30,14 @@ class CatalogProductCard extends StatelessWidget {
     return Card(
       elevation: 5,
       child: Container(
-        height: 183.h,
+        height: 203.h,
         width: 152.w,
         margin: EdgeInsets.only(right: 15),
         child: Column(
           children: [
+            SizedBox(
+              height: 10.h,
+            ),
             Stack(
               fit: StackFit.loose,
               clipBehavior: Clip.none,

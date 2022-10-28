@@ -17,7 +17,5 @@ export 'package:fruit_hub/screens/home_screens/widgets/catalog_product.dart';
 export 'package:get/get.dart';
 export 'package:firebase_storage/firebase_storage.dart';
 export 'package:image_picker/image_picker.dart';
-
-
 export 'package:shared_preferences/shared_preferences.dart';
 

@@ -109,14 +109,7 @@ class _HomePageState extends State<HomePage> {
                   const SizedBox(
                     height: 20,
                   ),
-                  // Row(
-                  //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  //   children: [
-                  //   Text("Hottest"),
-                  //   Text("Popular"),
-                  //   Text("New Combo"),
-                  //   Text("Top"),
-                  // ],),
+
                   Container(
                     height: 40,
                     child: Row(
@@ -126,7 +119,6 @@ class _HomePageState extends State<HomePage> {
                           onTap: () {
                             ref = hottest;
                             setState(() {
-                              _color = BackgroundColor;
                             });
                           },
                           child: const Text(
@@ -137,7 +129,6 @@ class _HomePageState extends State<HomePage> {
                           onTap: () {
                             ref = popular;
                             setState(() {
-                              _color = BackgroundColor;
                             });
                           },
                           child: const Text("Popular"),
@@ -146,7 +137,6 @@ class _HomePageState extends State<HomePage> {
                           onTap: () {
                             ref = newCombo;
                             setState(() {
-                              _color = BackgroundColor;
                             });
                           },
                           child: const Text("New Combo",
@@ -157,7 +147,6 @@ class _HomePageState extends State<HomePage> {
                           onTap: () {
                             ref = juices;
                             setState(() {
-                              _color = BackgroundColor;
                             });
                           },
                           child: const Text("Juices"),
@@ -195,6 +184,9 @@ class _HomePageState extends State<HomePage> {
                                   margin: EdgeInsets.only(right: 15),
                                   child: Column(
                                     children: [
+                                      SizedBox(
+                                        height: 10.h,
+                                      ),
                                       Stack(
                                         fit: StackFit.loose,
                                         clipBehavior: Clip.none,

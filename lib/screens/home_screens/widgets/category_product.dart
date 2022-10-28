@@ -6,7 +6,6 @@ import '../../../utils/imports/imports.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 
 class Fetchdata extends StatefulWidget {
   const Fetchdata({super.key});
@@ -114,34 +113,6 @@ class _FetchdataState extends State<Fetchdata> {
                           ),
                         );
 
-
-                        //   Container(
-                        //  height: 100,
-                        //   width: 100,
-                        //   child: Card(
-                        //     child: ListTile(
-                        //       leading: CircleAvatar(
-                        //           foregroundImage: imageFile == null
-                        //               ? Image.asset("assets/images/person.png")
-                        //               .image
-                        //               : Image.network(imageFile.path).image),
-                        //       subtitle: Text(data['productName'].toString()),
-                        //       // trailing: InkWell(
-                        //       //   onTap: (() {
-                        //       //
-                        //       //     collectionReference
-                        //       //         .doc(snapshot.data!.docs[index].id
-                        //       //         .toString())
-                        //       //         .delete();
-                        //       //   }),
-                        //       //   child: const Icon(
-                        //       //     Icons.delete_outline_outlined,
-                        //       //     color: Colors.red,
-                        //       //   ),
-                        //       // ),
-                        //     ),
-                        //   ),
-                        // );
                       })),
                 );
               }),

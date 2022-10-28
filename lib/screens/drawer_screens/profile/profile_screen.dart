@@ -25,7 +25,7 @@ class Profile_Screen extends StatelessWidget {
                 Obx(
                       () => Container(
                     margin: EdgeInsets.symmetric(vertical: 20, horizontal: 30),
-                    child: CircleAvatar(
+                      child: CircleAvatar(
                       radius: 63,
                       backgroundColor: BackgroundColor,
                       child:
