@@ -9,18 +9,22 @@ class CartTotal extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Obx(()=>
-       Container(
-        padding: EdgeInsets.symmetric(horizontal: 30),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text('Total ', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+    return Obx(() {
+      return
+        Container(
+          padding: EdgeInsets.symmetric(horizontal: 30),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              const Text('Total ',
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
 
-            Text('\$${controller.total}', style: TextStyle(fontSize: 20 ),),
-          ],
-        ),
-      ),
+              Text('\$${controller.total}', style: TextStyle(fontSize: 20),),
+            ],
+          ),
+        );
+
+    }
     );
   }
 }

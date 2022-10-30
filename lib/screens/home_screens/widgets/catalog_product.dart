@@ -28,11 +28,11 @@ class CatalogProductCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      elevation: 5,
+      elevation: 1,
       child: Container(
         height: 203.h,
-        width: 152.w,
-        margin: EdgeInsets.only(right: 15),
+        width: 140.w,
+        margin: EdgeInsets.only(right: 25),
         child: Column(
           children: [
             SizedBox(
@@ -54,7 +54,7 @@ class CatalogProductCard extends StatelessWidget {
                   ),
                 ),
                 Positioned(
-                    left: 90.w,
+                    left: 80.w,
                     top: 0.h,
                     child: Icon(Icons.favorite_border, color: BackgroundColor,))
               ],
@@ -62,7 +62,7 @@ class CatalogProductCard extends StatelessWidget {
             SizedBox(height: 8.h,),
             SimpleText(productController.products[index].name),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Text("\$${productController.products[index].price}", style: TextStyle(color: BackgroundColor, fontSize: 18.sp),),
                 Container(

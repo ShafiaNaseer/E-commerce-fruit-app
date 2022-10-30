@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
           )
         ),
       ),
-      child: const HomePage(),
+      child:  HomePage(),
       designSize: Size(375, 812),
     );
   }

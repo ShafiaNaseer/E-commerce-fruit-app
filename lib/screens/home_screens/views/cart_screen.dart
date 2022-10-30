@@ -21,7 +21,7 @@ class CartScreen extends StatefulWidget {
 State<CartScreen> createState() => _CartScreenState();
 }
 class _CartScreenState extends State<CartScreen> {
-  final CartController controller = Get.find<CartController>();
+  final CartController controller = Get.put(CartController());
 
   @override
   Widget build(BuildContext context) {

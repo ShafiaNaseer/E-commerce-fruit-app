@@ -3,6 +3,7 @@ import '../../home_screens/views/homePage.dart';
 import '../screens/login.dart';
 
 class AuthenticationController  extends GetxController {
+
   static signUp(BuildContext context, username, useremail, userpassword, userphone) async {
     try {
       FirebaseAuth firebaseAuth = FirebaseAuth.instance;
@@ -36,7 +37,6 @@ class AuthenticationController  extends GetxController {
       print("e: $e");
     }
   }
-
 
   static read() async {
     try {
@@ -101,7 +101,7 @@ class AuthenticationController  extends GetxController {
       await firebaseAuth.signInWithEmailAndPassword(
           email: userEmail, password: userPassword);
       prefs.setBool('isLogin', true);
-      Get.off(const HomePage());
+      Get.off( HomePage());
       read();
     } on FirebaseAuthException catch (ex) {
       print("Firebase Login Exception $ex");

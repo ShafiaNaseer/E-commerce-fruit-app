@@ -2,6 +2,7 @@ import 'dart:io';
 import 'package:firebase_storage/firebase_storage.dart' as firebaseStorage;
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:fruit_hub/utils/constants.dart';
 import 'package:fruit_hub/utils/imports/imports.dart';
@@ -114,7 +115,7 @@ class _UploadDataState extends State<UploadData> {
     imageFile?.delete(recursive: true);
 }
   // function
-  Future uploaddata(int category, String price, productname, stock) async {
+  Future uploaddata(int category, double price, String productname, stock) async {
     setState(() {
       showspinner = true;
     });
@@ -232,7 +233,7 @@ class _UploadDataState extends State<UploadData> {
                               name: 'New Combo',
                               value: 2,
                             ),
-                            DropDownValueModel(name: 'Top', value: 3),
+                            DropDownValueModel(name: 'Juice', value: 3),
                           ],
                           onChanged: (val) {
                             setState(() {});
@@ -258,6 +259,13 @@ class _UploadDataState extends State<UploadData> {
                             horizontal: 25.w, vertical: 10.h),
                         child: TextFormField(
                           controller: priceEditingController,
+                          inputFormatters: <TextInputFormatter>[
+                            LengthLimitingTextInputFormatter(12),
+                            //max length of 12 characters
+                            FilteringTextInputFormatter.digitsOnly,
+                            FilteringTextInputFormatter.singleLineFormatter,
+                          //  FilteringTextInputFormatter(RegExp("[0-9]+.[0-9]"), allow: false),
+                          ],
                           keyboardType: TextInputType.number,
                           validator: (value) {
                             if (value!.isEmpty) {
@@ -291,7 +299,7 @@ class _UploadDataState extends State<UploadData> {
                               await uploaddata(
                                   categoryEditingController
                                       .dropDownValue!.value,
-                                  priceEditingController.text,
+                                  double.parse(priceEditingController.text),
                                   productEditingController.text,
                                   stockEditingController.text);
                               clearTextField();
