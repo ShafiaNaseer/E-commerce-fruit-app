@@ -84,7 +84,7 @@ class _LogInState extends State<LogIn> {
                         context, emailController.text, passwordController.text);
                   }
                 },
-                child: ButtonContainer("Start Ordering")),
+                child: ButtonContainer("Login")),
           ],)),
 
             Container(

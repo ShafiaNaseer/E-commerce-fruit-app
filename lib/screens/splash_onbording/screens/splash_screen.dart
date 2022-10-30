@@ -17,20 +17,18 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   void initState() {
-    getValidationData().whenComplete(() async {
-      Timer(Duration(seconds: 3),
-          () => Get.off(checking == false ? OnBoarding() : HomePage()));
+    getValidationData().then((value) => {
+    Timer(Duration(seconds: 3),
+    () => Get.off(value == false ? OnBoarding() : HomePage()))
     });
     super.initState();
   }
 
-  Future getValidationData() async {
+  Future<bool> getValidationData() async {
     final SharedPreferences sharedPreferences =
         await SharedPreferences.getInstance();
     bool? logincheck = sharedPreferences.getBool('isLogin');
-    setState(() {
-      checking = logincheck!;
-    });
+    return logincheck!;
   }
 
   @override

@@ -41,14 +41,14 @@ ProfileController controller = Get.put(ProfileController());
             leading: Icon(Icons.person_rounded), title: Text("Profile"),
             onTap: () {
               Get.to(Profile_Screen());
-              Get.back();
+           //   Get.back();
             },
           ),
           ListTile(
             leading: Icon(Icons.add_moderator_sharp), title: Text("Add Product"),
             onTap: () {
               Get.to(UploadData());
-              Get.back();
+            //  Get.back();
             },
           ),
           ListTile(

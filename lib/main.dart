@@ -1,8 +1,4 @@
 
-
-
-import 'package:fruit_hub/screens/authentication/screens/login.dart';
-import 'package:fruit_hub/screens/home_screens/widgets/category_product.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 import '../../../utils/imports/imports.dart';
@@ -18,8 +14,6 @@ void main() async {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
@@ -35,7 +29,7 @@ class MyApp extends StatelessWidget {
           )
         ),
       ),
-      child:  HomePage(),
+      child:  SplashScreen(),
       designSize: Size(375, 812),
     );
   }
