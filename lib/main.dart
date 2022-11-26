@@ -1,4 +1,5 @@
 
+import 'package:fruit_hub/screens/authentication/screens/login.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 import '../../../utils/imports/imports.dart';
@@ -17,7 +18,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      builder: (context , child) => GetMaterialApp(
+      builder: (context , child) =>
+          GetMaterialApp(
         title: 'Flutter Demo',
         debugShowCheckedModeBanner: false,
         home: child,
@@ -29,7 +31,7 @@ class MyApp extends StatelessWidget {
           )
         ),
       ),
-      child:  SplashScreen(),
+      child:  LogIn(),
       designSize: Size(375, 812),
     );
   }

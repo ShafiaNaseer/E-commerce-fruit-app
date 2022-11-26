@@ -105,7 +105,14 @@ class AuthenticationController  extends GetxController {
       read();
     } on FirebaseAuthException catch (ex) {
       print("Firebase Login Exception $ex");
-    } catch (e) {
+      if (ex.code == "invalid-email") {
+        Get.snackbar(
+            "Kindly enter valid Email address", "",
+            snackPosition: SnackPosition.BOTTOM, duration: Duration(seconds: 2));
+        print("Kindly enter valid Email address");
+
+    }  }
+    catch (e) {
       print("e $e");
     }
   }
